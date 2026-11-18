@@ -2,9 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "elections",
+    "title": "2026 Election Analysis",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "The chart below compares major-party candidate filings by gender across the 2026 midterm elections."
+  },
+  {
+    "objectID": "index.html#male-vs.-female-candidates-in-2026",
+    "href": "index.html#male-vs.-female-candidates-in-2026",
+    "title": "2026 Election Analysis",
+    "section": "",
+    "text": "The chart below compares major-party candidate filings by gender across the 2026 midterm elections."
   },
   {
     "objectID": "about.html",
