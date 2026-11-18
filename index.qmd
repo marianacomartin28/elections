@@ -2,6 +2,45 @@
 title: "elections"
 ---
 
-This is a Quarto website.
+---
+title: "2026 Election Analysis"
+---
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{r}
+#| label: setup
+#| message: false
+#| echo: false
+
+library(tidyverse)
+```
+
+## Male vs. Female Candidates in 2026
+
+The chart below compares major-party candidate filings by gender across the 2026 midterm elections.
+
+```{r}
+#| label: gender-plot
+#| message: false
+#| echo: false
+
+gender_data <- tibble(
+  office = rep(c("U.S. House", "U.S. Senate", "Governor"), each = 2),
+  gender = rep(c("Female", "Male"), times = 3),
+  candidates = c(590, 1646, 65, 125, 60, 110)
+)
+
+gender_data |>
+  ggplot(aes(x = office, y = candidates, fill = gender)) +
+  geom_col(position = "dodge") +
+  theme_classic() +
+  scale_fill_manual(values = c("Female" = "#9b59b6", "Male" = "#3498db")) +
+  labs(
+    title = "Male vs. Female Candidates in 2026",
+    subtitle = "Major-party candidate filings across offices",
+    x = "Office",
+    y = "Number of Candidates",
+    fill = "Gender",
+    caption = "Source: Center for American Women and Politics (CAWP)"
+  )
+```
+
